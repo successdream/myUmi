@@ -22,11 +22,21 @@ import { ThemContext } from './ThemContext'
 // }
 
 // export function onRouteChange({ location, routes, action }) {
+//   const { global } = window.g_app._store.getState();
+//   if(global.isLogin) {
+
+//   }
 //   console.log(location, routes, action, '999')
 // }
 
-export function onRouteChange({ matchedRoutes }) {
-  console.log(matchedRoutes, 'matchedRoutes')
+export function onRouteChange({ matchedRoutes, location, routes, action  }) {
+  // console.log(window, 'window', window.g_app)
+  // console.log(matchedRoutes, 'matchedRoutes')
+  // const { global } = window.g_app._store.getState();
+  // if(global.isLogin) {
+
+  // }
+  // console.log(location, routes, action, '999')
   if (matchedRoutes.length) {
     document.title = matchedRoutes[matchedRoutes.length - 1].route.title || '';
   }
@@ -40,7 +50,7 @@ export  function rootContainer(container) {
    new Promise((resolve) => {
     resolve({ user: '张三', age: '18'})
   }).then((res) => {
-    debugger
+    // debugger
     data = { value: res }
   })
   console.log(data, 'data666')
