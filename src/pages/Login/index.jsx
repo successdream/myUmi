@@ -3,6 +3,7 @@ import styles from './index.less';
 import { Button } from 'antd';
 import { connect } from 'dva';
 import { history, useModel } from 'umi';
+import { testUtils } from '@utils';
 const Login = (props) => {
   const { changeLogin } = props;
   // const modal = useModel('global');
@@ -13,6 +14,7 @@ const Login = (props) => {
   useEffect(() => {
     // const store = window.g_app._store;
     // console.log(store, 'store')
+    // testUtils()
   }, []);
   const handelLogin = () => {
     changeLogin({ isLogin: true });

@@ -4,6 +4,7 @@ import { ThemContext } from '@/ThemContext';
 import { Link, history } from 'umi';
 import { Button } from 'antd';
 import { connect } from 'dva';
+import SideBar from './SideBar';
 
 // import _ from 'lodash'
 const Layouts = (props) => {
@@ -24,12 +25,13 @@ const Layouts = (props) => {
   };
   return (
     <div className={styles.layOuts}>
-      <h1 className={styles.title}>我是layOuts组件</h1>
-      <Link to="/users">Users Page</Link>
-      <Button onClick={handleLoginOut}>登出</Button>
-      <div className={styles.imgBox}></div>
-      <div style={{ width: '500px', height: '500px' }}>{props.children}</div>
-      {/* <img src={imgIcon} alt="" /> */}
+      <div className={styles.layOutHeader}>header 组件</div>
+      <div className={styles.contentBox}>
+        <div className={styles.sideBarBox}>
+          <SideBar />
+        </div>
+        <div className={styles.leftContentBox}>{props.children}</div>
+      </div>
     </div>
   );
 };

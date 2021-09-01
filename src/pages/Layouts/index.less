@@ -1,11 +1,24 @@
-.layOuts{
-    font-size: 20px;
-    color: #fff;
-    font-weight: 700;
-    .imgBox{
-        width: 100px;
-        height: 100px;
-        background-image: url('~@/img/123.jpg');
-        background-size: contain;
+.layOuts {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  height: 100%;
+  width: 100%;
+  .layOutHeader {
+    height: 66px;
+    background-color: red;
+  }
+  .contentBox {
+    height: calc(100% - 66px);
+    display: flex;
+    .sideBarBox {
+      width: 200px;
+      height: 100%;
     }
+    .leftContentBox {
+      width: calc(100% - 200px);
+      height: 100%;
+      background-color: green;
+    }
+  }
 }

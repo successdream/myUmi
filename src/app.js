@@ -35,23 +35,23 @@ export function onRouteChange({ matchedRoutes, location, routes, action }) {
   // if(global.isLogin) {
 
   // }
-  console.log(location, routes, action, '999');
+  // console.log(location, routes, action, '999');
   if (matchedRoutes.length) {
     document.title = matchedRoutes[matchedRoutes.length - 1].route.title || '';
   }
 }
 
-const ThemeProvider = ThemContext.Provider;
+// const ThemeProvider = ThemContext.Provider;
 
-export function rootContainer(container) {
-  let data = { value: null };
-  new Promise((resolve) => {
-    resolve({ user: '张三', age: '18' });
-  }).then((res) => {
-    // debugger
-    data = { value: res };
-  });
-  console.log(data, 'data666');
+// export function rootContainer(container) {
+//   let data = { value: null };
+//   new Promise((resolve) => {
+//     resolve({ user: '张三', age: '18' });
+//   }).then((res) => {
+//     // debugger
+//     data = { value: res };
+//   });
+//   console.log(data, 'data666');
 
-  return React.createElement(ThemeProvider, data, container);
-}
+//   return React.createElement(ThemeProvider, data, container);
+// }
