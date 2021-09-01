@@ -48,7 +48,6 @@ export function onRouteChange({ matchedRoutes, location, routes, action }) {
 //   new Promise((resolve) => {
 //     resolve({ user: '张三', age: '18' });
 //   }).then((res) => {
-//     // debugger
 //     data = { value: res };
 //   });
 //   console.log(data, 'data666');

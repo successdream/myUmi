@@ -14,6 +14,7 @@ export default defineConfig({
     // 'utils': '../utils/index.js'
     '@utils': resolve(__dirname, '../src/utils'),
     '@routes': resolve(__dirname, '../routes'),
+    '@services': resolve(__dirname, '../src/services'),
   },
   chainWebpack(memo, { env, webpack, createCSSRule }) {
     console.log(memo, env, webpack, createCSSRule, 'chainWebpack');
