@@ -4,9 +4,8 @@ import routes from '../routes';
 export default defineConfig({
   routes,
   favicon: '../public/favicon.ico',
-  plugins: [
-    
-  ]
+  404: true,
+  plugins: [],
 });
 
 // export default {
