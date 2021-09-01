@@ -1,0 +1,35 @@
+.layOuts {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  height: 100%;
+  width: 100%;
+  .layOutHeader {
+    height: 66px;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    .headerLabel {
+      font-size: 30px;
+    }
+    .loginOut {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+  .contentBox {
+    height: calc(100% - 66px);
+    display: flex;
+    .sideBarBox {
+      width: 200px;
+      height: 100%;
+    }
+    .leftContentBox {
+      width: calc(100% - 200px);
+      height: 100%;
+      background-color: green;
+    }
+  }
+}
