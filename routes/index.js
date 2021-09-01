@@ -33,7 +33,7 @@ export const sideBarList = [
   },
 ];
 export default [
-  // { exact: true, path: '/login', component: '@/pages/Login', title: '登录' },
+  { exact: true, path: '/login', component: '@/pages/Login', title: '登录' },
   // { exact: true, path: '/users', component: '@/pages/User', title: '用户页面' },
   {
     path: '/',

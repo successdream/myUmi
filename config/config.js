@@ -12,7 +12,7 @@ export default defineConfig({
   },
   alias: {
     // 'utils': '../utils/index.js'
-    '@utils': resolve(__dirname, '../utils'),
+    '@utils': resolve(__dirname, '../src/utils'),
     '@routes': resolve(__dirname, '../routes'),
   },
   chainWebpack(memo, { env, webpack, createCSSRule }) {

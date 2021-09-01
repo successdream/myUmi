@@ -25,7 +25,12 @@ const Layouts = (props) => {
   };
   return (
     <div className={styles.layOuts}>
-      <div className={styles.layOutHeader}>header 组件</div>
+      <div className={styles.layOutHeader}>
+        <div className={styles.headerLabel}>header 组件</div>
+        <div className={styles.loginOut} onClick={handleLoginOut}>
+          登出
+        </div>
+      </div>
       <div className={styles.contentBox}>
         <div className={styles.sideBarBox}>
           <SideBar />
