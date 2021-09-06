@@ -6,7 +6,8 @@
     "postinstall": "umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
+    "test:coverage": "umi-test --coverage",
+    "analyze": "set ANALYZE=1 umi dev"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -23,7 +24,12 @@
     "@ant-design/pro-layout": "^6.5.0",
     "react": "17.x",
     "react-dom": "17.x",
-    "umi": "^3.5.17"
+    "react-loadable": "^5.5.0",
+    "sockjs-client": "^1.5.0",
+    "stompjs": "^2.3.3",
+    "umi": "^3.5.17",
+    "xgplayer": "^2.18.3",
+    "xgplayer-flv": "^2.4.13"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
@@ -33,6 +39,7 @@
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.0",
     "typescript": "^4.1.2",
+    "umi-webpack-bundle-analyzer": "^4.4.2",
     "yorkie": "^2.0.0"
   }
 }

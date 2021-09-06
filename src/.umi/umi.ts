@@ -4,12 +4,12 @@ import '@@/core/devScripts';
 import { plugin } from './core/plugin';
 import './core/pluginRegister';
 import { createHistory } from './core/history';
-import { ApplyPluginsType } from 'D:/umi/um3/node_modules/umi/node_modules/@umijs/runtime';
+import { ApplyPluginsType } from 'D:/umi/um3/node_modules/@umijs/runtime';
 import { renderClient } from 'D:/umi/um3/node_modules/@umijs/renderer-react';
 import { getRoutes } from './core/routes';
 
 
-
+import '../global.css';
 
 const getClientRender = (args: { hot?: boolean; routes?: any[] } = {}) => plugin.applyPlugins({
   key: 'render',

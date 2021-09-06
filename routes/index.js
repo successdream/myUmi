@@ -8,7 +8,8 @@ export const sideBarList = [
   },
   {
     path: '/options2',
-    component: '@/pages/Layouts/Options2',
+    // component: '@/pages/Layouts/Options2',
+    component: () => import('@/pages/Layouts/Options2'),
     title: 'options2',
   },
   {
@@ -30,6 +31,11 @@ export const sideBarList = [
     path: '/options6',
     component: '@/pages/Layouts/Options6',
     title: 'options6',
+  },
+  {
+    path: '/video',
+    component: '@/pages/Layouts/Video',
+    title: '视频',
   },
 ];
 export default [

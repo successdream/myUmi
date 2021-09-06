@@ -22,5 +22,8 @@ export default {
         ...payload,
       };
     },
+    changeLogin(state, { payload }) {
+      state.isLogin = payload.isLogin;
+    },
   },
 };

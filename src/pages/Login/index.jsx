@@ -14,7 +14,7 @@ const Login = (props) => {
   useEffect(() => {
     // const store = window.g_app._store;
     // console.log(store, 'store')
-    // testUtils()
+    testUtils();
   }, []);
   const handelLogin = () => {
     changeLogin({ isLogin: true });
@@ -38,7 +38,7 @@ export default connect(
   (dispatch) => {
     return {
       changeLogin: (data) => {
-        dispatch({ type: 'global/setState', payload: data });
+        dispatch({ type: 'global/changeLogin', payload: data });
       },
     };
   },

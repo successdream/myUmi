@@ -50,7 +50,7 @@ export default connect(
   (dispatch) => {
     return {
       changeLogin: (data) => {
-        dispatch({ type: 'global/setState', payload: data });
+        dispatch({ type: 'global/changeLogin', payload: data });
       },
     };
   },

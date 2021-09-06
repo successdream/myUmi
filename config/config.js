@@ -7,6 +7,16 @@ export default defineConfig({
   routes,
   favicon: '../public/favicon.ico',
   plugins: [],
+  analyze: {
+    analyzerMode: 'server',
+    analyzerPort: 8888,
+    openAnalyzer: true,
+    // generate stats file while ANALYZE_DUMP exist
+    generateStatsFile: false,
+    statsFilename: 'stats.json',
+    logLevel: 'info',
+    defaultSizes: 'parsed', // stat  // gzip
+  },
   define: {
     // _: _.defaultTo
   },
@@ -18,6 +28,16 @@ export default defineConfig({
   },
   chainWebpack(memo, { env, webpack, createCSSRule }) {
     console.log(memo, env, webpack, createCSSRule, 'chainWebpack');
+  },
+  proxy: {
+    '/api': {
+      target: 'http://10.204.231.102',
+      changeOrigin: true,
+    },
+  },
+  dva: {
+    immer: true,
+    hmr: true,
   },
 });
 
