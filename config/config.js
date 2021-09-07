@@ -27,7 +27,7 @@ export default defineConfig({
     '@services': resolve(__dirname, '../src/services'),
   },
   chainWebpack(memo, { env, webpack, createCSSRule }) {
-    console.log(memo, env, webpack, createCSSRule, 'chainWebpack');
+    // console.log(memo, env, webpack, createCSSRule, 'chainWebpack');
   },
   proxy: {
     '/api': {

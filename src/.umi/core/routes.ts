@@ -30,6 +30,7 @@ export function getRoutes() {
       },
       {
         "path": "/options2",
+        "component": require('@/pages/Layouts/Options2').default,
         "title": "options2",
         "exact": true
       },

@@ -4,10 +4,12 @@ import { connect } from 'dva';
 import { Button } from 'antd';
 
 const Options1 = (props) => {
-  const { test, changeTest } = props;
+  const { test, changeTest, currentOptions, changeCurrentOptions } = props;
   const handleClick = () => {
     changeTest({ test: 666 });
+    changeCurrentOptions({ currentOptions: 'options1' });
   };
+
   useEffect(() => {
     console.log(test);
   }, [test]);
@@ -19,15 +21,17 @@ const Options1 = (props) => {
         testModal{' '}
       </Button>
       <div>{test}</div>
+      <div>当前的options: {currentOptions}</div>
     </div>
   );
 };
 
 export default connect(
-  ({ global }) => {
+  ({ global, options }) => {
     return {
       isLogin: global.isLogin,
       test: global.test,
+      currentOptions: options.currentOptions,
     };
   },
   (dispatch) => {
@@ -37,6 +41,9 @@ export default connect(
       },
       changeTest: (data) => {
         dispatch({ type: 'global/testEffectFn', payload: data });
+      },
+      changeCurrentOptions: (data) => {
+        dispatch({ type: 'options/setState', payload: data });
       },
     };
   },

@@ -12,9 +12,44 @@ const Layouts = (props) => {
   console.log(ThemContext, 'ThemContext');
   // console.log( _, 'Layouts')
   const theme = useContext(ThemContext);
+  // window.addEventListener('beforeunload', () => {
+  //   alert(7777)
+  //   return '12223?'
+  // })
+  useEffect(() => {
+    // console.log
+    // window.onbeforeunload=function(){
+    //   // alert(777)
+    //   return '1231'
+    // };
+  }, []);
+  window.onunload = (e) => {
+    // debugger
+    // debugger
+    e = e || window.event;
+    if (e) {
+      e.returnValue = '关闭提示';
+    }
+    const str = localStorage.getItem('store') || '1';
 
+    localStorage.setItem('store', Number(str) + 1 + '');
+    // this.toCloseFun()//调用自己的方法
+    // Chrome, Safari, Firefox 4+, Opera 12+ , IE 9+
+    return '关闭提示';
+  };
+
+  //  window.addEventListener('')
   useEffect(() => {
     console.log(theme, 'theme');
+    // window.addEventListener('unload', (e) => {
+    //   e = e || window.event;
+    //   const str = localStorage.getItem('store') || '1';
+
+    //   localStorage.setItem('store',  Number(str) + 1 + '')
+    //   // this.toCloseFun()//调用自己的方法
+    //   // Chrome, Safari, Firefox 4+, Opera 12+ , IE 9+
+    //   return '关闭提示';
+    //  })
     // const data = _.cloneDeep({ a: 1, b: 2});
     // console.log(data, 'lodash')
   }, [theme]);

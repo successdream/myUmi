@@ -8,8 +8,8 @@ export const sideBarList = [
   },
   {
     path: '/options2',
-    // component: '@/pages/Layouts/Options2',
-    component: () => import('@/pages/Layouts/Options2'),
+    component: '@/pages/Layouts/Options2',
+    // component: () => import('@/pages/Layouts/Options2'),
     title: 'options2',
   },
   {
