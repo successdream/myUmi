@@ -38,6 +38,7 @@ export default defineConfig({
   dva: {
     immer: true,
     hmr: true,
+    lazyLoad: true,
   },
 });
 

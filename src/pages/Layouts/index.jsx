@@ -1,14 +1,19 @@
 import styles from './index.less';
 import React, { useContext, useEffect } from 'react';
 import { ThemContext } from '@/ThemContext';
-import { Link, history } from 'umi';
+import { Link, history, useModel } from 'umi';
 import { Button } from 'antd';
 import { connect } from 'dva';
 import SideBar from './SideBar';
 
 // import _ from 'lodash'
 const Layouts = (props) => {
-  const { changeLogin } = props;
+  const { signout } = useModel('useAuthModel', (model) => {
+    // alert(666)
+    // debugger
+    return { signout: model.signout };
+  });
+
   console.log(ThemContext, 'ThemContext');
   // console.log( _, 'Layouts')
   const theme = useContext(ThemContext);
@@ -54,9 +59,10 @@ const Layouts = (props) => {
     // console.log(data, 'lodash')
   }, [theme]);
   const handleLoginOut = () => {
-    changeLogin({ isLogin: false });
-    localStorage.removeItem('login');
-    history.push('/login');
+    // changeLogin({ isLogin: false });
+    // localStorage.removeItem('login');
+    // history.push('/login');
+    signout();
   };
   return (
     <div className={styles.layOuts}>

@@ -5,21 +5,19 @@ import { connect } from 'dva';
 import { history, useModel } from 'umi';
 import { testUtils } from '@utils';
 const Login = (props) => {
-  const { changeLogin } = props;
-  // const modal = useModel('global');
-  // useEffect(() => {
-  //     console.log(modal)
-  // }, [modal])
-  // console.log(modal, 'modal')
+  // console.log(user, 'user-user')
+  const { signin } = useModel('useAuthModel', (model) => ({
+    signin: model.signin,
+  }));
+
   useEffect(() => {
-    // const store = window.g_app._store;
-    // console.log(store, 'store')
     testUtils();
   }, []);
   const handelLogin = () => {
-    changeLogin({ isLogin: true });
-    localStorage.setItem('login', true);
-    history.push('/');
+    // changeLogin({ isLogin: true });
+    // localStorage.setItem('login', true);
+    // history.push('/');
+    signin({ account: 'zhangsan', password: '123456' });
   };
   return (
     <div className={styles.login}>

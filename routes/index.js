@@ -46,6 +46,7 @@ export default [
     component: '@/pages/Layouts',
     title: '首页',
     routes: sideBarList,
+    wrappers: ['@/Wrappers/Auth'],
   },
   // {
   //   path: '*',

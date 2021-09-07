@@ -64,7 +64,8 @@ export function getRoutes() {
         "title": "视频",
         "exact": true
       }
-    ]
+    ],
+    "wrappers": [require('@/Wrappers/Auth').default]
   }
 ];
 
